@@ -30,7 +30,7 @@ public class Aggregate extends Operator {
      *            The aggregation operator to use
      */
     public Aggregate(OpIterator child, int afield, int gfield, Aggregator.Op aop) {
-	// some code goes here
+	// TODO: some code goes here
     }
 
     /**
@@ -39,7 +39,7 @@ public class Aggregate extends Operator {
      *         {@link simpledb.Aggregator#NO_GROUPING}
      * */
     public int groupField() {
-	// some code goes here
+	// TODO: some code goes here
 	return -1;
     }
 
@@ -49,7 +49,7 @@ public class Aggregate extends Operator {
      *         null;
      * */
     public String groupFieldName() {
-	// some code goes here
+	// TODO: some code goes here
 	return null;
     }
 
@@ -57,7 +57,7 @@ public class Aggregate extends Operator {
      * @return the aggregate field
      * */
     public int aggregateField() {
-	// some code goes here
+	// TODO: some code goes here
 	return -1;
     }
 
@@ -66,7 +66,7 @@ public class Aggregate extends Operator {
      *         tuples
      * */
     public String aggregateFieldName() {
-	// some code goes here
+	// TODO: some code goes here
 	return null;
     }
 
@@ -74,7 +74,7 @@ public class Aggregate extends Operator {
      * @return return the aggregate operator
      * */
     public Aggregator.Op aggregateOp() {
-	// some code goes here
+	// TODO: some code goes here
 	return null;
     }
 
@@ -84,7 +84,7 @@ public class Aggregate extends Operator {
 
     public void open() throws NoSuchElementException, DbException,
 	    TransactionAbortedException {
-	// some code goes here
+	// TODO: some code goes here
     }
 
     /**
@@ -95,12 +95,12 @@ public class Aggregate extends Operator {
      * aggregate. Should return null if there are no more tuples.
      */
     protected Tuple fetchNext() throws TransactionAbortedException, DbException {
-	// some code goes here
+	// TODO: some code goes here
 	return null;
     }
 
     public void rewind() throws DbException, TransactionAbortedException {
-	// some code goes here
+	// TODO: some code goes here
     }
 
     /**
@@ -115,23 +115,23 @@ public class Aggregate extends Operator {
      * iterator.
      */
     public TupleDesc getTupleDesc() {
-	// some code goes here
+	// TODO: some code goes here
 	return null;
     }
 
     public void close() {
-	// some code goes here
+	// TODO: some code goes here
     }
 
     @Override
     public OpIterator[] getChildren() {
-	// some code goes here
+	// TODO: some code goes here
 	return null;
     }
 
     @Override
     public void setChildren(OpIterator[] children) {
-	// some code goes here
+	// TODO: some code goes here
     }
     
 }

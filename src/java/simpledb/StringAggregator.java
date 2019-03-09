@@ -17,7 +17,7 @@ public class StringAggregator implements Aggregator {
      */
 
     public StringAggregator(int gbfield, Type gbfieldtype, int afield, Op what) {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     /**
@@ -25,7 +25,7 @@ public class StringAggregator implements Aggregator {
      * @param tup the Tuple containing an aggregate field and a group-by field
      */
     public void mergeTupleIntoGroup(Tuple tup) {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     /**
@@ -37,7 +37,7 @@ public class StringAggregator implements Aggregator {
      *   aggregate specified in the constructor.
      */
     public OpIterator iterator() {
-        // some code goes here
+        // TODO: some code goes here
         throw new UnsupportedOperationException("please implement me for lab2");
     }
 

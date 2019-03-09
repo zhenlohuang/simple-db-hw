@@ -466,7 +466,7 @@ public class LogFile {
         synchronized (Database.getBufferPool()) {
             synchronized(this) {
                 preAppend();
-                // some code goes here
+                // TODO: some code goes here
             }
         }
     }
@@ -493,14 +493,14 @@ public class LogFile {
         synchronized (Database.getBufferPool()) {
             synchronized (this) {
                 recoveryUndecided = false;
-                // some code goes here
+                // TODO: some code goes here
             }
          }
     }
 
     /** Print out a human readable represenation of the log */
     public void print() throws IOException {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     public  synchronized void force() throws IOException {

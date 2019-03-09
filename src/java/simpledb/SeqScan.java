@@ -28,7 +28,7 @@ public class SeqScan implements OpIterator {
      *            tableAlias.null, or null.null).
      */
     public SeqScan(TransactionId tid, int tableid, String tableAlias) {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     /**
@@ -45,7 +45,7 @@ public class SeqScan implements OpIterator {
      * */
     public String getAlias()
     {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
@@ -62,7 +62,7 @@ public class SeqScan implements OpIterator {
      *            tableAlias.null, or null.null).
      */
     public void reset(int tableid, String tableAlias) {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     public SeqScan(TransactionId tid, int tableId) {
@@ -70,7 +70,7 @@ public class SeqScan implements OpIterator {
     }
 
     public void open() throws DbException, TransactionAbortedException {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     /**
@@ -84,27 +84,27 @@ public class SeqScan implements OpIterator {
      *         prefixed with the tableAlias string from the constructor.
      */
     public TupleDesc getTupleDesc() {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
     public boolean hasNext() throws TransactionAbortedException, DbException {
-        // some code goes here
+        // TODO: some code goes here
         return false;
     }
 
     public Tuple next() throws NoSuchElementException,
             TransactionAbortedException, DbException {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
     public void close() {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     public void rewind() throws DbException, NoSuchElementException,
             TransactionAbortedException {
-        // some code goes here
+        // TODO: some code goes here
     }
 }

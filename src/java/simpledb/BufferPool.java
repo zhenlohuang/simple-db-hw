@@ -32,7 +32,7 @@ public class BufferPool {
      * @param numPages maximum number of pages in this buffer pool.
      */
     public BufferPool(int numPages) {
-        // some code goes here
+        // TODO: some code goes here
     }
     
     public static int getPageSize() {
@@ -66,7 +66,7 @@ public class BufferPool {
      */
     public  Page getPage(TransactionId tid, PageId pid, Permissions perm)
         throws TransactionAbortedException, DbException {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
@@ -80,7 +80,7 @@ public class BufferPool {
      * @param pid the ID of the page to unlock
      */
     public  void releasePage(TransactionId tid, PageId pid) {
-        // some code goes here
+        // TODO: some code goes here
         // not necessary for lab1|lab2
     }
 
@@ -90,13 +90,13 @@ public class BufferPool {
      * @param tid the ID of the transaction requesting the unlock
      */
     public void transactionComplete(TransactionId tid) throws IOException {
-        // some code goes here
+        // TODO: some code goes here
         // not necessary for lab1|lab2
     }
 
     /** Return true if the specified transaction has a lock on the specified page */
     public boolean holdsLock(TransactionId tid, PageId p) {
-        // some code goes here
+        // TODO: some code goes here
         // not necessary for lab1|lab2
         return false;
     }
@@ -110,7 +110,7 @@ public class BufferPool {
      */
     public void transactionComplete(TransactionId tid, boolean commit)
         throws IOException {
-        // some code goes here
+        // TODO: some code goes here
         // not necessary for lab1|lab2
     }
 
@@ -131,7 +131,7 @@ public class BufferPool {
      */
     public void insertTuple(TransactionId tid, int tableId, Tuple t)
         throws DbException, IOException, TransactionAbortedException {
-        // some code goes here
+        // TODO: some code goes here
         // not necessary for lab1
     }
 
@@ -150,7 +150,7 @@ public class BufferPool {
      */
     public  void deleteTuple(TransactionId tid, Tuple t)
         throws DbException, IOException, TransactionAbortedException {
-        // some code goes here
+        // TODO: some code goes here
         // not necessary for lab1
     }
 
@@ -160,7 +160,7 @@ public class BufferPool {
      *     break simpledb if running in NO STEAL mode.
      */
     public synchronized void flushAllPages() throws IOException {
-        // some code goes here
+        // TODO: some code goes here
         // not necessary for lab1
 
     }
@@ -174,7 +174,7 @@ public class BufferPool {
         are removed from the cache so they can be reused safely
     */
     public synchronized void discardPage(PageId pid) {
-        // some code goes here
+        // TODO: some code goes here
         // not necessary for lab1
     }
 
@@ -183,14 +183,14 @@ public class BufferPool {
      * @param pid an ID indicating the page to flush
      */
     private synchronized  void flushPage(PageId pid) throws IOException {
-        // some code goes here
+        // TODO: some code goes here
         // not necessary for lab1
     }
 
     /** Write all pages of the specified transaction to disk.
      */
     public synchronized  void flushPages(TransactionId tid) throws IOException {
-        // some code goes here
+        // TODO: some code goes here
         // not necessary for lab1|lab2
     }
 
@@ -199,7 +199,7 @@ public class BufferPool {
      * Flushes the page to disk to ensure dirty pages are updated on disk.
      */
     private synchronized  void evictPage() throws DbException {
-        // some code goes here
+        // TODO: some code goes here
         // not necessary for lab1
     }
 

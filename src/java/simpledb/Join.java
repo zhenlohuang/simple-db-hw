@@ -21,11 +21,11 @@ public class Join extends Operator {
      *            Iterator for the right(inner) relation to join
      */
     public Join(JoinPredicate p, OpIterator child1, OpIterator child2) {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     public JoinPredicate getJoinPredicate() {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
@@ -35,7 +35,7 @@ public class Join extends Operator {
      *       alias or table name.
      * */
     public String getJoinField1Name() {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
@@ -45,7 +45,7 @@ public class Join extends Operator {
      *       alias or table name.
      * */
     public String getJoinField2Name() {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
@@ -54,21 +54,21 @@ public class Join extends Operator {
      *      implementation logic.
      */
     public TupleDesc getTupleDesc() {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
     public void open() throws DbException, NoSuchElementException,
             TransactionAbortedException {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     public void close() {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     public void rewind() throws DbException, TransactionAbortedException {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     /**
@@ -90,19 +90,19 @@ public class Join extends Operator {
      * @see JoinPredicate#filter
      */
     protected Tuple fetchNext() throws TransactionAbortedException, DbException {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
     @Override
     public OpIterator[] getChildren() {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
     @Override
     public void setChildren(OpIterator[] children) {
-        // some code goes here
+        // TODO: some code goes here
     }
 
 }

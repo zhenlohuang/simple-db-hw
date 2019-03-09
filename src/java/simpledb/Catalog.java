@@ -23,7 +23,7 @@ public class Catalog {
      * Creates a new, empty catalog.
      */
     public Catalog() {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     /**
@@ -36,7 +36,7 @@ public class Catalog {
      * @param pkeyField the name of the primary key field
      */
     public void addTable(DbFile file, String name, String pkeyField) {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     public void addTable(DbFile file, String name) {
@@ -59,7 +59,7 @@ public class Catalog {
      * @throws NoSuchElementException if the table doesn't exist
      */
     public int getTableId(String name) throws NoSuchElementException {
-        // some code goes here
+        // TODO: some code goes here
         return 0;
     }
 
@@ -70,7 +70,7 @@ public class Catalog {
      * @throws NoSuchElementException if the table doesn't exist
      */
     public TupleDesc getTupleDesc(int tableid) throws NoSuchElementException {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
@@ -81,28 +81,28 @@ public class Catalog {
      *     function passed to addTable
      */
     public DbFile getDatabaseFile(int tableid) throws NoSuchElementException {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
     public String getPrimaryKey(int tableid) {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
     public Iterator<Integer> tableIdIterator() {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
     public String getTableName(int id) {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
     
     /** Delete all tables from the catalog */
     public void clear() {
-        // some code goes here
+        // TODO: some code goes here
     }
     
     /**

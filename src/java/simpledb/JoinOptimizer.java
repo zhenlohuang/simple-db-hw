@@ -156,7 +156,7 @@ public class JoinOptimizer {
             boolean t2pkey, Map<String, TableStats> stats,
             Map<String, Integer> tableAliasToId) {
         int card = 1;
-        // some code goes here
+        // TODO: some code goes here
         return card <= 0 ? 1 : card;
     }
 
@@ -219,7 +219,7 @@ public class JoinOptimizer {
             throws ParsingException {
         //Not necessary for labs 1--3
 
-        // some code goes here
+        // TODO: some code goes here
         //Replace the following
         return joins;
     }

@@ -23,7 +23,7 @@ public class IntegerAggregator implements Aggregator {
      */
 
     public IntegerAggregator(int gbfield, Type gbfieldtype, int afield, Op what) {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     /**
@@ -34,7 +34,7 @@ public class IntegerAggregator implements Aggregator {
      *            the Tuple containing an aggregate field and a group-by field
      */
     public void mergeTupleIntoGroup(Tuple tup) {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     /**
@@ -46,7 +46,7 @@ public class IntegerAggregator implements Aggregator {
      *         the constructor.
      */
     public OpIterator iterator() {
-        // some code goes here
+        // TODO: some code goes here
         throw new
         UnsupportedOperationException("please implement me for lab2");
     }

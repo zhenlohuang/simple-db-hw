@@ -41,7 +41,7 @@ public class TupleDesc implements Serializable {
      *        that are included in this TupleDesc
      * */
     public Iterator<TDItem> iterator() {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
@@ -59,7 +59,7 @@ public class TupleDesc implements Serializable {
      *            be null.
      */
     public TupleDesc(Type[] typeAr, String[] fieldAr) {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     /**
@@ -71,14 +71,14 @@ public class TupleDesc implements Serializable {
      *            TupleDesc. It must contain at least one entry.
      */
     public TupleDesc(Type[] typeAr) {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     /**
      * @return the number of fields in this TupleDesc
      */
     public int numFields() {
-        // some code goes here
+        // TODO: some code goes here
         return 0;
     }
 
@@ -92,7 +92,7 @@ public class TupleDesc implements Serializable {
      *             if i is not a valid field reference.
      */
     public String getFieldName(int i) throws NoSuchElementException {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
@@ -107,7 +107,7 @@ public class TupleDesc implements Serializable {
      *             if i is not a valid field reference.
      */
     public Type getFieldType(int i) throws NoSuchElementException {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
@@ -121,7 +121,7 @@ public class TupleDesc implements Serializable {
      *             if no field with a matching name is found.
      */
     public int fieldNameToIndex(String name) throws NoSuchElementException {
-        // some code goes here
+        // TODO: some code goes here
         return 0;
     }
 
@@ -130,7 +130,7 @@ public class TupleDesc implements Serializable {
      *         Note that tuples from a given TupleDesc are of a fixed size.
      */
     public int getSize() {
-        // some code goes here
+        // TODO: some code goes here
         return 0;
     }
 
@@ -145,7 +145,7 @@ public class TupleDesc implements Serializable {
      * @return the new TupleDesc
      */
     public static TupleDesc merge(TupleDesc td1, TupleDesc td2) {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
@@ -161,7 +161,7 @@ public class TupleDesc implements Serializable {
      */
 
     public boolean equals(Object o) {
-        // some code goes here
+        // TODO: some code goes here
         return false;
     }
 
@@ -179,7 +179,7 @@ public class TupleDesc implements Serializable {
      * @return String describing this descriptor.
      */
     public String toString() {
-        // some code goes here
+        // TODO: some code goes here
         return "";
     }
 }

@@ -23,7 +23,7 @@ public class HeapFile implements DbFile {
      *            file.
      */
     public HeapFile(File f, TupleDesc td) {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     /**
@@ -32,7 +32,7 @@ public class HeapFile implements DbFile {
      * @return the File backing this HeapFile on disk.
      */
     public File getFile() {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
@@ -46,7 +46,7 @@ public class HeapFile implements DbFile {
      * @return an ID uniquely identifying this HeapFile.
      */
     public int getId() {
-        // some code goes here
+        // TODO: some code goes here
         throw new UnsupportedOperationException("implement this");
     }
 
@@ -56,19 +56,19 @@ public class HeapFile implements DbFile {
      * @return TupleDesc of this DbFile.
      */
     public TupleDesc getTupleDesc() {
-        // some code goes here
+        // TODO: some code goes here
         throw new UnsupportedOperationException("implement this");
     }
 
     // see DbFile.java for javadocs
     public Page readPage(PageId pid) {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
     // see DbFile.java for javadocs
     public void writePage(Page page) throws IOException {
-        // some code goes here
+        // TODO: some code goes here
         // not necessary for lab1
     }
 
@@ -76,14 +76,14 @@ public class HeapFile implements DbFile {
      * Returns the number of pages in this HeapFile.
      */
     public int numPages() {
-        // some code goes here
+        // TODO: some code goes here
         return 0;
     }
 
     // see DbFile.java for javadocs
     public ArrayList<Page> insertTuple(TransactionId tid, Tuple t)
             throws DbException, IOException, TransactionAbortedException {
-        // some code goes here
+        // TODO: some code goes here
         return null;
         // not necessary for lab1
     }
@@ -91,14 +91,14 @@ public class HeapFile implements DbFile {
     // see DbFile.java for javadocs
     public ArrayList<Page> deleteTuple(TransactionId tid, Tuple t) throws DbException,
             TransactionAbortedException {
-        // some code goes here
+        // TODO: some code goes here
         return null;
         // not necessary for lab1
     }
 
     // see DbFile.java for javadocs
     public DbFileIterator iterator(TransactionId tid) {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 

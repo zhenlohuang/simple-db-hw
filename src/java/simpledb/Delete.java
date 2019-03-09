@@ -20,24 +20,24 @@ public class Delete extends Operator {
      *            The child operator from which to read tuples for deletion
      */
     public Delete(TransactionId t, OpIterator child) {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     public TupleDesc getTupleDesc() {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
     public void open() throws DbException, TransactionAbortedException {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     public void close() {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     public void rewind() throws DbException, TransactionAbortedException {
-        // some code goes here
+        // TODO: some code goes here
     }
 
     /**
@@ -50,19 +50,19 @@ public class Delete extends Operator {
      * @see BufferPool#deleteTuple
      */
     protected Tuple fetchNext() throws TransactionAbortedException, DbException {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
     @Override
     public OpIterator[] getChildren() {
-        // some code goes here
+        // TODO: some code goes here
         return null;
     }
 
     @Override
     public void setChildren(OpIterator[] children) {
-        // some code goes here
+        // TODO: some code goes here
     }
 
 }
