@@ -18,12 +18,17 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class Catalog {
 
+    private ConcurrentHashMap<String, Table> nameToTable = null;
+    private ConcurrentHashMap<Integer, Table> idToTable = null;
+    private Object lock = new Object();
+
     /**
      * Constructor.
      * Creates a new, empty catalog.
      */
     public Catalog() {
-        // TODO: some code goes here
+        nameToTable = new ConcurrentHashMap<>();
+        idToTable = new ConcurrentHashMap<>();
     }
 
     /**
@@ -36,7 +41,11 @@ public class Catalog {
      * @param pkeyField the name of the primary key field
      */
     public void addTable(DbFile file, String name, String pkeyField) {
-        // TODO: some code goes here
+        Table table = new Table(file, name, pkeyField);
+        synchronized (lock) {
+            nameToTable.put(name, table);
+            idToTable.put(table.getId(), table);
+        }
     }
 
     public void addTable(DbFile file, String name) {
@@ -59,8 +68,8 @@ public class Catalog {
      * @throws NoSuchElementException if the table doesn't exist
      */
     public int getTableId(String name) throws NoSuchElementException {
-        // TODO: some code goes here
-        return 0;
+        checkTableName(name);
+        return nameToTable.get(name).getId();
     }
 
     /**
@@ -70,8 +79,8 @@ public class Catalog {
      * @throws NoSuchElementException if the table doesn't exist
      */
     public TupleDesc getTupleDesc(int tableid) throws NoSuchElementException {
-        // TODO: some code goes here
-        return null;
+        checkTableId(tableid);
+        return idToTable.get(tableid).getFile().getTupleDesc();
     }
 
     /**
@@ -81,28 +90,42 @@ public class Catalog {
      *     function passed to addTable
      */
     public DbFile getDatabaseFile(int tableid) throws NoSuchElementException {
-        // TODO: some code goes here
-        return null;
+        checkTableId(tableid);
+        return idToTable.get(tableid).getFile();
     }
 
     public String getPrimaryKey(int tableid) {
-        // TODO: some code goes here
-        return null;
+        checkTableId(tableid);
+        return idToTable.get(tableid).getPkeyField();
     }
 
     public Iterator<Integer> tableIdIterator() {
-        // TODO: some code goes here
-        return null;
+        return idToTable.keySet().iterator();
     }
 
     public String getTableName(int id) {
-        // TODO: some code goes here
-        return null;
+        checkTableId(id);
+        return idToTable.get(id).getName();
     }
     
     /** Delete all tables from the catalog */
     public void clear() {
-        // TODO: some code goes here
+        synchronized (lock) {
+            nameToTable.clear();
+            idToTable.clear();
+        }
+    }
+
+    private void checkTableName(String name) {
+        if(name == null || nameToTable == null || !nameToTable.containsKey(name)) {
+            throw new NoSuchElementException(String.format("Table {} not found in database.", name));
+        }
+    }
+
+    private void checkTableId(int tableid) {
+        if(idToTable == null || !idToTable.containsKey(tableid)) {
+            throw new NoSuchElementException(String.format("Table ID {} not found in database.", tableid));
+        }
     }
     
     /**
@@ -136,7 +159,7 @@ public class Catalog {
                         System.exit(0);
                     }
                     if (els2.length == 3) {
-                        if (els2[2].trim().equals("pk"))
+                        if (els2[2].trim().equals("pkeyField"))
                             primaryKey = els2[0].trim();
                         else {
                             System.out.println("Unknown annotation " + els2[2]);
@@ -157,6 +180,34 @@ public class Catalog {
         } catch (IndexOutOfBoundsException e) {
             System.out.println ("Invalid catalog entry : " + line);
             System.exit(0);
+        }
+    }
+
+    class Table {
+        private DbFile file = null;
+        private String name = null;
+        private String pkeyField = null;
+
+        public Table(DbFile file, String name, String pkeyField) {
+            this.file = file;
+            this.name = name;
+            this.pkeyField = pkeyField;
+        }
+
+        public int getId() {
+            return file.getId();
+        }
+
+        public DbFile getFile() {
+            return file;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getPkeyField() {
+            return pkeyField;
         }
     }
 }
