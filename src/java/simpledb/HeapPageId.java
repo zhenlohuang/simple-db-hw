@@ -3,6 +3,9 @@ package simpledb;
 /** Unique identifier for HeapPage objects. */
 public class HeapPageId implements PageId {
 
+    private int tableId;
+    private int pgNo;
+
     /**
      * Constructor. Create a page id structure for a specific page of a
      * specific table.
@@ -11,13 +14,13 @@ public class HeapPageId implements PageId {
      * @param pgNo The page number in that table.
      */
     public HeapPageId(int tableId, int pgNo) {
-        // TODO: some code goes here
+        this.tableId = tableId;
+        this.pgNo = pgNo;
     }
 
     /** @return the table associated with this PageId */
     public int getTableId() {
-        // TODO: some code goes here
-        return 0;
+        return tableId;
     }
 
     /**
@@ -25,19 +28,7 @@ public class HeapPageId implements PageId {
      *   this PageId
      */
     public int getPageNumber() {
-        // TODO: some code goes here
-        return 0;
-    }
-
-    /**
-     * @return a hash code for this page, represented by the concatenation of
-     *   the table number and the page number (needed if a PageId is used as a
-     *   key in a hash table in the BufferPool, for example.)
-     * @see BufferPool
-     */
-    public int hashCode() {
-        // TODO: some code goes here
-        throw new UnsupportedOperationException("implement this");
+        return pgNo;
     }
 
     /**
@@ -47,9 +38,28 @@ public class HeapPageId implements PageId {
      * @return true if the objects are equal (e.g., page numbers and table
      *   ids are the same)
      */
+    @Override
     public boolean equals(Object o) {
-        // TODO: some code goes here
-        return false;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        HeapPageId that = (HeapPageId) o;
+
+        if (tableId != that.tableId) return false;
+        return pgNo == that.pgNo;
+    }
+
+    /**
+     * @return a hash code for this page, represented by the concatenation of
+     *   the table number and the page number (needed if a PageId is used as a
+     *   key in a hash table in the BufferPool, for example.)
+     * @see BufferPool
+     */
+    @Override
+    public int hashCode() {
+        int result = tableId;
+        result = 31 * result + pgNo;
+        return result;
     }
 
     /**
